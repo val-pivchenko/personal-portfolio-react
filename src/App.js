@@ -1,24 +1,84 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Particles from "react-tsparticles";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+// import { AnimatePresence } from "framer-motion";
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Particles
+          id="tsparticles"
+          options={{
+            fpsLimit: 300,
+            interactivity: {
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: "bubble",
+                },
+                resize: true,
+              },
+              modes: {
+                bubble: {
+                  duration: 1,
+                  opacity: .3,
+                  size: 6,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: ["#EB5E28", "#252422", "#CCC5B9"]
+              },
+              collisions: {
+                enable: true,
+              },
+              move: {
+                direction: "top",
+                enable: true,
+                outMode: "out",
+                random: true,
+                speed: 2,
+              },
+              number: {
+                density: {
+                  enable: false,
+                },
+                value: 200,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                random: true,
+                value: 3,
+                anim: {
+                  speed: 4,
+                  size_min: 0.3
+                }
+              },
+            },
+            detectRetina: true,
+          }}
+        />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router >
+      <ToastContainer />
+    </>
   );
 }
 

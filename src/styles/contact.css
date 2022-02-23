@@ -1,0 +1,99 @@
+.contact-content {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-heading-dark {
+    margin-bottom: 1rem;
+    color: #252422;
+    font-family: 'Quicksand', sans-serif;    
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.contact-link {
+    font-size: 3.5rem;
+    color: #252422;
+    transition: 0.3s;
+    margin: 0 1rem;
+}
+
+.contact-link:hover{
+    color: #EB5E28;
+}
+
+.contact-form {
+    width: 70%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.visible {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+input,
+textarea {
+    padding: .5rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-family: 'Quicksand', sans-serif;    
+    font-weight: 400;
+    outline: none;
+    border: .5px solid black;
+}
+
+.submit-btn {
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-family: 'Quicksand', sans-serif;    
+    font-weight: 400;
+    background-color: #252422;
+    color: white;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+}
+
+.submit-btn:hover {
+    background-color: #EB5E28;
+    color: white;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    margin-bottom: 1rem;
+    height: 14rem;
+}
+
+
+@media only screen and (max-width: 680px) {
+    .contact-heading-dark {
+        margin-bottom: 1rem;
+        color: #252422;
+        font-family: 'Quicksand', sans-serif;    
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+}
