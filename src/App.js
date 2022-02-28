@@ -28,7 +28,7 @@ function App() {
               modes: {
                 bubble: {
                   duration: 1,
-                  opacity: .3,
+                  opacity: .5,
                   size: 6,
                 },
               },
@@ -54,7 +54,7 @@ function App() {
                 value: 200,
               },
               opacity: {
-                value: 0.5,
+                value: 0.3,
               },
               shape: {
                 type: "circle",

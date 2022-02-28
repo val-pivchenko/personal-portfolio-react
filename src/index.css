@@ -10,6 +10,7 @@ font-family: 'Lato', sans-serif; */
 }
 
 body {
+  max-width: 100vw;
   background-color: #FFFCF2;
 }
 
@@ -32,6 +33,7 @@ nav {
 }
 
 .nav-logo {
+  color:#403D39;
   text-align: center;
   cursor: pointer;
   width: 50%;
@@ -46,6 +48,7 @@ nav {
 }
 
 .nav-btn {
+  text-decoration: none;
   text-transform: lowercase;
   border: none;
   font-weight: 700;
@@ -97,7 +100,7 @@ nav {
   }
 
   .hamburger-container.active {
-    background-color: rgba(235, 94, 40, 0.85);
+    /* background-color: rgba(235, 94, 40, 0.85); */
 }
 
   .hamburger {
@@ -121,25 +124,38 @@ nav {
   }
 
   .nav-ul {
+    transform: scaleY(0.00001);
     opacity: 0;
     background-color: rgba(204, 197, 185, .2); 
     backdrop-filter: blur(5px);
-    position: fixed;
+    position: absolute;
     right: 0;
-    top: 80px;
+    top: 0px;
     gap: 0;
     flex-direction: column;
     justify-content: flex-start;
     width: 50%;
     height: 100vh;
     text-align: center;
-    transition: .5s;
-
+    transition:  .5s;
   }
 
   .nav-ul.active {
     background-color: rgba(235, 94, 40, 0.85);
     opacity: 1;
+    transform: scaleY(1)
+  }
+
+  .nav-li:first-child {
+    margin-top: 5rem;
+  }
+
+  .display-none {
+    display: none;
+  }
+
+  .display-block {
+    display: block;
   }
 
   .nav-btn {
